@@ -1,0 +1,11 @@
+[core]
+ editor = vim
+[user]
+  name = Jameson Lee
+  email = jamesonjlee@gmail.com
+[alias]
+  co = checkout
+  cm = commit -m
+  br = branch
+  st = status
+  l = log
