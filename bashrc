@@ -101,7 +101,7 @@ fi
 #################### begin my stuff ##########################
 
 #for node.js
-if [ -f ~/node_modules/.bin ]
+if [ -f ~/node_modules/.bin ]; then
   PATH=$PATH":~/node_modules/.bin"
 fi
 
