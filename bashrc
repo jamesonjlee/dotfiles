@@ -78,9 +78,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+#alias ll='ls -alF'
+#alias la='ls -A'
+#alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -98,6 +98,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+if [ -f ~/.profile ]; then
+  source ~/.profile
+fi
+
 #################### begin my stuff ##########################
 
 #for node.js
@@ -105,4 +109,13 @@ if [ -f ~/node_modules/.bin ]; then
   PATH=$PATH":~/node_modules/.bin"
 fi
 
-
+#detect OS:
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+  platform='linux'
+  alias ls="ls --color=auto"
+elif [[ "$unamestr" == 'Darwin' ]]; then
+  platform='darwin'
+  alias ls="ls -G"
+fi

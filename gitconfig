@@ -1,14 +1,21 @@
 [color]
   diff = auto
   status = auto
-[core]
- editor = vim
-[user]
-  name = Jameson Lee
-  email = jamesonjlee@gmail.com
 [alias]
   co = checkout
   cm = commit -m
   br = branch
   st = status
   l = log
+[user]
+	name = Jameson
+	email = jamesonjlee@gmail.com
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

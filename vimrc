@@ -80,6 +80,9 @@ colorscheme elflord
 " folding
 set foldmethod=indent
 
+" Enable mouse support
+set mouse=a
+
 "for switching tabs/windows
 "CTRL for tabs, ALT for windows
 map <C-left> <C-w><left>
