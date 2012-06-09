@@ -1,3 +1,5 @@
-ssh/id_rsa*
-ssh/known_hosts
+ssh/*
+!ssh/config
+!ssh/*.public
+!ssh/*.pub
 old_files
