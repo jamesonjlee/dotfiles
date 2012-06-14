@@ -8,31 +8,37 @@ vimrc
 bashrc
 gitignore
 gitconfig
+hgrc
 "
 
-if [ ! -e ~/dotfiles/old_files ]; then
-    #move old files
-    mkdir ~/dotfiles/old_files
+DOTFILE_DIR=`pwd`
+
+if [ ! -e $DOTFILE_DIR/old_files ]; then
+
+echo "Moving old files to $DOTFILE_DIR"
+    mkdir $DOTFILE_DIR/old_files
     for DIR in ${DIRLIST};
     do
-        mv ~/.${DIR} ~/dotfiles/old_files/
+        mv ~/.${DIR} $DOTFILE_DIR/old_files/
     done
     for FILE in ${FILELIST};
     do
-        mv ~/.${FILE} ~/dotfiles/old_files/
+        mv ~/.${FILE} $DOTFILE_DIR/old_files/
     done
 
-    #link dir and files
+echo "Linking Directories and Files"
     for FILE in ${FILELIST};
     do
-        ln -s ~/dotfiles/${FILE} ~/.${FILE}
+        ln -s $DOTFILE_DIR/${FILE} ~/.${FILE}
     done
     for DIR in ${DIRLIST};
     do
-        ln -s ~/dotfiles/${DIR} ~/.${DIR}
-        rm ~/dotfiles/${DIR}/${DIR}
+        ln -s $DOTFILE_DIR/${DIR} ~/.${DIR}
+	# this removes the self-ln from above
+        rm ~$DOTFILE_DIR/${DIR}/${DIR}
     done
-
+    sudo apt-get install exuberant-ctags
+else
+    echo "$DOTFILE_DIR/oldfiles exists, please clean up before running"
 fi
 
-sudo aptitude install exuberant-ctags
