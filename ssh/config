@@ -1,2 +1,8 @@
 Host github.com
 	IdentityFile ~/.ssh/id_rsa.private
+
+Host amazonaws.com
+  IdentityFile ~/.ssh/chatid_rsa
+
+Host code.chatid.com
+  IdentityFile ~/.ssh/chatid_rsa
