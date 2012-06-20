@@ -101,7 +101,7 @@ fi
 #################### begin my stuff ##########################
 
 #for node.js
-if [ -f ~/node_modules/.bin ]; then
+if [[ -d ~/node_modules/.bin ]]; then
   PATH=$PATH":~/node_modules/.bin"
 fi
 
@@ -115,3 +115,10 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
   platform='darwin'
   alias ls="ls -G"
 fi
+
+## for rvm ##
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+#if [[ -d $HOME/.rvm/bin ]]; then
+#  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#fi
