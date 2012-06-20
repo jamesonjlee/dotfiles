@@ -4,6 +4,7 @@ vim
 "
 
 FILELIST="
+gemrc
 vimrc
 bashrc
 gitignore
