@@ -98,6 +98,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+if [ -f ~/.profile ]; then
+  . ~/.profile
+fi
+
 #################### begin my stuff ##########################
 
 #for node.js
@@ -119,6 +123,20 @@ fi
 ## for rvm ##
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-#if [[ -d $HOME/.rvm/bin ]]; then
-#  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-#fi
+# editor
+export EDITOR=vim
+
+## for knife
+knife-ssh () {
+  eval 'knife ssh -a cloud.public_hostname -x ubuntu -i ~/.ssh/chef_rsa -V $*';
+}
+knife-cb () {
+  eval 'knife cookbook $*';
+}
+chef-node-host () {
+  eval 'knife-ssh "role:*" "cat /etc/chef/first-boot.json" | sed "s/{\"run_list\":\[\"role//g" | sed "s/\"\]}//g" ';
+}
+knife-env() {
+  eval 'knife environment $*';
+}
+
