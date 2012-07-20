@@ -75,7 +75,9 @@ set showbreak=↪
 set clipboard+=unnamed
 
 "colorscheme
-colorscheme elflord
+"colorscheme elflord
+set background=dark
+colorscheme solarized
 
 " folding
 set foldmethod=indent
