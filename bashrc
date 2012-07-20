@@ -139,4 +139,7 @@ chef-node-host () {
 knife-env() {
   eval 'knife environment $*';
 }
+tree() {
+  eval "ls -R $*| grep ':$' | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/  /' -e 's/-/|/'"
+}
 
