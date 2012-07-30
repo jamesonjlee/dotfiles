@@ -98,6 +98,8 @@ map <C-left> <C-w><left>
 map <C-right> <C-w><right>
 map <C-up> <C-w><up>
 map <C-down> <C-w><down>
+" complement <C-w>n :new<CR>
+map <C-w>m :vnew<CR>
 
 "just use gt and gT
 "map <A-left> :tabnext<CR>
@@ -115,30 +117,33 @@ let NERDTreeWinSize=20
 map <F5> :TagbarToggle<CR>
 
 "For autocmd
-autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTree " start nerd tree
 
+"map for commands
+map <C-w>s :AsyncShell 
 
-command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
-function! s:RunShellCommand(cmdline)
-  let isfirst = 1
-  let words = []
-  for word in split(a:cmdline)
-    if isfirst
-      let isfirst = 0  " don't change first word (shell command)
-    else
-      if word[0] =~ '\v[%#<]'
-        let word = expand(word)
-      endif
-      let word = shellescape(word, 1)
-    endif
-    call add(words, word)
-  endfor
-  let expanded_cmdline = join(words)
-  botright new
-  setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
-  call setline(1, 'You entered:  ' . a:cmdline)
-  call setline(2, 'Expanded to:  ' . expanded_cmdline)
-  call append(line('$'), substitute(getline(2), '.', '=', 'g'))
-  silent execute '$read !'. expanded_cmdline
-  1
-endfunction
+" Shell command (copy result into a buffer)
+"command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
+"function! s:RunShellCommand(cmdline)
+"  let isfirst = 1
+"  let words = []
+"  for word in split(a:cmdline)
+"    if isfirst
+"      let isfirst = 0  " don't change first word (shell command)
+"    else
+"      if word[0] =~ '\v[%#<]'
+"        let word = expand(word)
+"      endif
+"      let word = shellescape(word, 1)
+"    endif
+"    call add(words, word)
+"  endfor
+"  let expanded_cmdline = join(words)
+"  botright new
+"  setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
+"  call setline(1, 'You entered:  ' . a:cmdline)
+"  call setline(2, 'Expanded to:  ' . expanded_cmdline)
+"  call append(line('$'), substitute(getline(2), '.', '=', 'g'))
+"  silent execute '$read !'. expanded_cmdline
+"  1
+"endfunction

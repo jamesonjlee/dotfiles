@@ -123,6 +123,8 @@ fi
 ## for rvm ##
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+# make vim server for AsyncCommand
+alias vim="vim --servername vim_server"
 # editor
 export EDITOR=vim
 
