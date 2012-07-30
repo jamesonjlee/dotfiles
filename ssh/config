@@ -16,3 +16,8 @@ Host chatid
   HostName code.chatid.com
   IdentityFile ~/.ssh/chatid_rsa
 
+Host sqhead
+  User git
+  Hostname squareheadgroup.com
+  IdentityFile ~/.ssh/id_rsa
+
