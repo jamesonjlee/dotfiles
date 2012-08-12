@@ -14,7 +14,7 @@ set undofile
 set undodir=~/.vim-tmp
 
 " persistent paste
-set paste
+"set paste
 
 "history stuff
 set history =700				" setting history length to 700
@@ -79,7 +79,8 @@ set listchars=tab:▸\ ,eol:¬
 set showbreak=↪
 
 "clipboarding
-set clipboard+=unnamed
+set clipboard=unnamed
+"set clipboard+=unnamed
 
 "colorscheme
 "colorscheme elflord
@@ -102,11 +103,11 @@ map <C-down> <C-w><down>
 map <C-w>m :vnew<CR>
 
 "just use gt and gT
-"map <A-left> :tabnext<CR>
-"map <A-right> :tabprevious<CR>
-"map <A-down> :tabclose<CR>
-"map <A-up> :tabs<CR>
+map <A-left> :tabnext<CR>
+map <A-right> :tabprevious<CR>
+map <A-up> :tabs<CR>
 map <A-down> :tabe<CR>
+"map <A-c> :tabeclose<CR>
 
 "For NERDTree
 map <F4> :NERDTreeToggle<CR>
@@ -119,31 +120,31 @@ map <F5> :TagbarToggle<CR>
 "For autocmd
 autocmd VimEnter * NERDTree " start nerd tree
 
-"map for commands
-map <C-w>s :AsyncShell 
+"For vimshell
+map <C-w>s :source ~/.vim/bundle/vimsh/vimsh.vim<CR>
 
 " Shell command (copy result into a buffer)
-"command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
-"function! s:RunShellCommand(cmdline)
-"  let isfirst = 1
-"  let words = []
-"  for word in split(a:cmdline)
-"    if isfirst
-"      let isfirst = 0  " don't change first word (shell command)
-"    else
-"      if word[0] =~ '\v[%#<]'
-"        let word = expand(word)
-"      endif
-"      let word = shellescape(word, 1)
-"    endif
-"    call add(words, word)
-"  endfor
-"  let expanded_cmdline = join(words)
-"  botright new
-"  setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
-"  call setline(1, 'You entered:  ' . a:cmdline)
-"  call setline(2, 'Expanded to:  ' . expanded_cmdline)
-"  call append(line('$'), substitute(getline(2), '.', '=', 'g'))
-"  silent execute '$read !'. expanded_cmdline
-"  1
-"endfunction
+command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
+function! s:RunShellCommand(cmdline)
+  let isfirst = 1
+  let words = []
+  for word in split(a:cmdline)
+    if isfirst
+      let isfirst = 0  " don't change first word (shell command)
+    else
+      if word[0] =~ '\v[%#<]'
+        let word = expand(word)
+      endif
+      let word = shellescape(word, 1)
+    endif
+    call add(words, word)
+  endfor
+  let expanded_cmdline = join(words)
+  botright new
+  setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
+  call setline(1, 'You entered:  ' . a:cmdline)
+  call setline(2, 'Expanded to:  ' . expanded_cmdline)
+  call append(line('$'), substitute(getline(2), '.', '=', 'g'))
+  silent execute '$read !'. expanded_cmdline
+  1
+endfunction
