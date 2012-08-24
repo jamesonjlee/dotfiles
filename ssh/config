@@ -21,3 +21,12 @@ Host sqhead
   Hostname squareheadgroup.com
   IdentityFile ~/.ssh/id_rsa
 
+Host gitpa
+  User git
+  Hostname l.playersadvantage.co.uk
+  IdentityFile ~/.ssh/id_rsa
+
+Host dn25s
+  User ubuntu
+  Hostname ec2-184-73-87-64.compute-1.amazonaws.com
+  IdentityFile ~/.ssh/DN25S_rsa

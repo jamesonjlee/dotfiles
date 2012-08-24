@@ -109,6 +109,8 @@ if [[ -d ~/node_modules/.bin ]]; then
   PATH=$PATH":~/node_modules/.bin"
 fi
 
+alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+
 #detect OS:
 platform='unknown'
 unamestr=`uname`
