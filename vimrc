@@ -57,9 +57,9 @@ set nowritebackup                 " And again.
 set noswapfile                    " no swap files
 "set directory=$HOME/.vim/tmp/  " Keep swap/backup files in one location
 
-set expandtab					" spaces instead of tabs
-set shiftwidth=2				" shift width
-set tabstop=2					" tab width
+set expandtab                 " spaces instead of tabs
+set shiftwidth=4                " shift width
+set tabstop=4           " tab width
 set smarttab
 
 set laststatus=2                  " Show the status line all the time
@@ -75,9 +75,8 @@ set wrap						" word wrapA
 
 set list
 "display some chars with some other magicchars
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,trail:·,extends:>,precedes:<
 set showbreak=↪
-
 "clipboarding
 set clipboard=unnamed
 "set clipboard+=unnamed

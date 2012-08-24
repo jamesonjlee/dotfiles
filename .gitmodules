@@ -4,6 +4,6 @@
 [submodule "vim/bundle/vim-sunburst"]
 	path = vim/bundle/vim-sunburst
 	url = git://github.com/sickill/vim-sunburst.git
-[submodule "vim/bundle/AsyncCommmand"]
-	path = vim/bundle/AsyncCommmand
-	url = https://github.com/pydave/AsyncCommand.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
