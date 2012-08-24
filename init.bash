@@ -43,3 +43,5 @@ else
     echo "$DOTFILE_DIR/oldfiles exists, please clean up before running"
 fi
 
+git submodule init
+git submodule update
