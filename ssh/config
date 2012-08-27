@@ -17,3 +17,8 @@ Host dn25s
   User ubuntu
   Hostname ec2-184-73-87-64.compute-1.amazonaws.com
   IdentityFile ~/.ssh/DN25S_rsa
+
+Host virtualbox
+    User jameson
+    Hostname 192.168.56.101
+    IdentityFile ~/.ssh/id_rsa
