@@ -3,19 +3,6 @@ Host github
   HostName github.com
   IdentityFile ~/.ssh/id_rsa
 
-Host chatid-deploy
-  User git
-  HostName github.com
-  IdentityFile ~/.ssh/deploy_rsa
-
-Host *.amazonaws.com
-  User ubuntu
-  IdentityFile ~/.ssh/chef_rsa
-
-Host chatid
-  HostName code.chatid.com
-  IdentityFile ~/.ssh/chatid_rsa
-
 Host sqhead
   User git
   Hostname squareheadgroup.com
