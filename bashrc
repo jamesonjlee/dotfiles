@@ -125,12 +125,18 @@ fi
 ## for rvm ##
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+## git completion?
+if [ `which git` != "" ]; then
+    [[ -e $HOME/.git-completion.bash ]] && source $HOME/.git-completion.bash
+fi
+
 # vim
 export EDITOR=vim
 
 ## for knife
 alias knife_ssh="knife ssh -a cloud.public_hostname -x ubuntu -i ~/.ssh/chef_rsa -V"
 alias knife_cb="knife cookbook"
+alias sshss="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -l root"
 
 chef-node-host () {
   eval 'knife-ssh "role:*" "cat /etc/chef/first-boot.json" | sed "s/{\"run_list\":\[\"role//g" | sed "s/\"\]}//g" ';
@@ -141,4 +147,3 @@ knife-env() {
 tree() {
   eval "ls -R $*| grep ':$' | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/  /' -e 's/-/|/'"
 }
-alias ssh_chef="ssh -i ~/.ssh/chef_rsa -l ubuntu"
