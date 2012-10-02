@@ -1,3 +1,3 @@
-cookbook_copyright 'Chat ID Inc.'
-cookbook_email 'jameson@chatid.com'
+cookbook_copyright 'Suckers Kawwwwwww Inc.'
+cookbook_email 'jamesonjlee@gmail.com'
 cookbook_license 'apachev2'
