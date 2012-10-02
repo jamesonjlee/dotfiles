@@ -1,13 +1,14 @@
 "for pathogen
 "ask Steve Losh
-filetype off
-call pathogen#runtime_append_all_bundles()
-filetype plugin indent on		" type file detection
+call pathogen#infect()
+
+" haha 
 set nocompatible
 
 "now we start
 syntax enable					" syntax highlighting
 syntax on
+filetype plugin indent on
 
 " persistent undo
 set undofile
