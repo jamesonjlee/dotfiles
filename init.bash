@@ -9,6 +9,7 @@ vimrc
 bashrc
 gitignore
 gitconfig
+git-completion.bash
 hgrc
 "
 
@@ -38,7 +39,8 @@ echo "Linking Directories and Files"
 	# this removes the self-ln from above
         rm ~$DOTFILE_DIR/${DIR}/${DIR}
     done
-    sudo apt-get install exuberant-ctags
+    echo "go install exuberant-ctags!"
+    #sudo apt-get install exuberant-ctags
 else
     echo "$DOTFILE_DIR/oldfiles exists, please clean up before running"
 fi
