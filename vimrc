@@ -6,7 +6,7 @@ call pathogen#infect()
 set nocompatible
 
 "now we start
-syntax enable					" syntax highlighting
+syntax enable                    " syntax highlighting
 syntax on
 filetype plugin indent on
 
@@ -18,26 +18,26 @@ set undodir=~/.vim-tmp
 "set paste
 
 "history stuff
-set history =700				" setting history length to 700
+set history =700                " setting history length to 700
 
 "encoding stuff
 set encoding=utf-8
 
-set autoread 					" detect changes in outside apps
-set ruler						" show cursor position
-set number						" line numbers
+set autoread                     " detect changes in outside apps
+set ruler                        " show cursor position
+set number                        " line numbers
 
-set ignorecase					" case insensitive searching...
-set smartcase					" ...unless query is capitalized
-set hlsearch					" highlight matches...
-set magic						" pattern match with special characters
-set showmatch					" show matching braces/paren
+set ignorecase                    " case insensitive searching...
+set smartcase                    " ...unless query is capitalized
+set hlsearch                    " highlight matches...
+set magic                        " pattern match with special characters
+set showmatch                    " show matching braces/paren
 
-set showcmd    	     	        " display incomplete commands.
-set showmode					" display the mode you're in.
+set showcmd                         " display incomplete commands.
+set showmode                    " display the mode you're in.
 
-set gfn=Menlo:h18			    " gVim font
-set shell=/bin/bash		    	" for running things
+set gfn=Menlo:h18                " gVim font
+set shell=/bin/bash                " for running things
 
 set backspace=indent,eol,start  " Intuitive backspacing.
 
@@ -47,6 +47,7 @@ set wildmenu                      " Enhanced command line completion.
 set wildmode=list:longest         " Complete files like a shell.
 
 "set wrap                          " Turn on line wrapping.
+set nowrap
 set scrolloff=3                   " Show 3 lines of context around the cursor.
 
 set title                         " Set the terminal's title
@@ -68,11 +69,11 @@ set laststatus=2                  " Show the status line all the time
 " sexy status line
 " set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-set lbr							" smart word breaking
-set tw=80						" line width
+"set lbr                            " smart word breaking
+"set tw=80                        " line width
 
 set si              " smart indenting
-set wrap						" word wrapA
+set wrap
 
 set list
 "display some chars with some other magicchars
