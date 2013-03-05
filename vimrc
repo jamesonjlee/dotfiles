@@ -118,6 +118,9 @@ let NERDTreeWinSize=20
 "For TagBar
 map <F5> :TagbarToggle<CR>
 
+"For CtrlP
+map <C-p> :CtrlP<CR>
+
 "For autocmd
 autocmd VimEnter * NERDTree " start nerd tree
 
