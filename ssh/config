@@ -22,3 +22,9 @@ Host virtualbox
     User jameson
     Hostname 192.168.56.101
     IdentityFile ~/.ssh/id_rsa
+
+Host herelabs.com
+    User ubuntu
+
+Host *
+    ServerAliveInterval 300
