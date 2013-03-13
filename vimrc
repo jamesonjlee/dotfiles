@@ -94,6 +94,23 @@ set foldmethod=indent
 " Enable mouse support
 set mouse=a
 
+
+""""""""""""""""""""""""""""""""
+" custom keys
+" custom keys
+" custom keys
+""""""""""""""""""""""""""""""""
+nnoremap <Space><BS> <Esc>
+inoremap <Space><BS> <Esc>
+
+noremap l <left>
+noremap <C-w>l <C-w><left>
+noremap ; <right>
+noremap <C-w>; <C-w><right>
+noremap <C-x> :x<CR>
+noremap <C-q> :q<CR>
+
+""""""""""""""""""""""""""""""""
 "for switching tabs/windows
 "CTRL for tabs, ALT for windows
 map <C-left> <C-w><left>
