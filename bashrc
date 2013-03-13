@@ -151,3 +151,9 @@ tree() {
 }
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+make-n-pip() {
+    eval 'virtualenv .'
+    eval '. bin/activate'
+    eval 'pip install -r ./requirements.txt'
+}
