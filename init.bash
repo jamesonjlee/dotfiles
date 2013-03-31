@@ -47,3 +47,7 @@ fi
 
 git submodule init
 git submodule update
+pushd vim/bundle/jedi-vim
+  git submodule update --init
+popd
+
