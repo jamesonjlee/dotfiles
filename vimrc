@@ -110,6 +110,8 @@ noremap <C-w>; <C-w><right>
 noremap <C-x> :x<CR>
 noremap <C-q> :q<CR>
 
+let mapleader = ","
+
 """"""""""""""""""""""""""""""""
 "for switching tabs/windows
 "CTRL for tabs, ALT for windows
