@@ -29,6 +29,8 @@ db/*.sqlite3
 *.lock
 .lockScript
 .lock-wscript
+# minue gemfile
+!Gemfile.lock
 
 # for node.js
 .node_modules
