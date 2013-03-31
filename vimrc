@@ -100,8 +100,8 @@ set mouse=a
 " custom keys
 " custom keys
 """"""""""""""""""""""""""""""""
-"nnoremap <Space><BS> <Esc>
-"inoremap <Space><BS> <Esc>
+nnoremap <Space> za
+vnoremap <Space> zf
 
 noremap l <left>
 noremap <C-w>l <C-w><left>
