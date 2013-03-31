@@ -8,6 +8,8 @@ set nocompatible
 "now we start
 syntax enable                    " syntax highlighting
 syntax on
+filetype on
+filetype plugin on
 filetype plugin indent on
 
 " persistent undo
@@ -86,6 +88,7 @@ set clipboard=unnamed
 "colorscheme
 "colorscheme elflord
 set background=dark
+let g:solarized_visibility="high"
 colorscheme solarized
 
 " folding
