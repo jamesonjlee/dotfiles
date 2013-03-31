@@ -1,4 +1,5 @@
 "for pathogen
+
 "ask Steve Losh
 call pathogen#infect()
 
@@ -106,12 +107,15 @@ set mouse=a
 nnoremap <Space> za
 vnoremap <Space> zf
 
+
+"remap movement keys
+"down, up, left, right
+"j     k     l     ;
 noremap l <left>
 noremap <C-w>l <C-w><left>
 noremap ; <right>
 noremap <C-w>; <C-w><right>
 noremap <C-x> :x<CR>
-noremap <C-q> :q<CR>
 
 let mapleader = ","
 
