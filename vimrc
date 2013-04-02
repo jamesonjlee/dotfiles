@@ -146,6 +146,9 @@ map <F5> :TagbarToggle<CR>
 
 "For CtrlP
 map <C-p> :CtrlP<CR>
+" don't mind me just ignoring things
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.tar,*.tar.*
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 "For autocmd
 autocmd VimEnter * NERDTree " start nerd tree
