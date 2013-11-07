@@ -1,6 +1,7 @@
 DIRLIST="
 ssh
 vim
+chef
 "
 
 FILELIST="
@@ -36,7 +37,7 @@ echo "Linking Directories and Files"
     for DIR in ${DIRLIST};
     do
         ln -s $DOTFILE_DIR/${DIR} ~/.${DIR}
-	# this removes the self-ln from above
+    # this removes the self-ln from above
         rm ~$DOTFILE_DIR/${DIR}/${DIR}
     done
     echo "go install exuberant-ctags!"
@@ -45,9 +46,7 @@ else
     echo "$DOTFILE_DIR/oldfiles exists, please clean up before running"
 fi
 
-git submodule init
-git submodule update
-pushd vim/bundle/jedi-vim
-  git submodule update --init
-popd
-
+# and submodules
+git submodule update --init
+git submodule foreach git pull origin master
+git submodule foreach git submodule update --init

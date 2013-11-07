@@ -157,3 +157,9 @@ make-n-pip() {
     eval '. bin/activate'
     eval 'pip install -r ./requirements.txt'
 }
+
+### Add go path
+PATH=$PATH:/usr/local/go/bin:/usr/local/go
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
