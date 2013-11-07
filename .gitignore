@@ -2,4 +2,9 @@ ssh/*
 !ssh/config
 !ssh/*.public
 !ssh/*.pub
+
+# temp files
 old_files
+
+# chef pems
+chef/*.pem
