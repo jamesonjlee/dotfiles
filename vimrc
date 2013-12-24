@@ -3,7 +3,7 @@
 "ask Steve Losh
 call pathogen#infect()
 
-" haha 
+" haha
 set nocompatible
 
 "now we start

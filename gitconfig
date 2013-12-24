@@ -1,15 +1,15 @@
 [push]
     default = current
 [color]
-  diff = auto
-  status = auto
+    diff = auto
+    status = auto
 [alias]
-  co = checkout
-  cm = commit -m
-  br = branch
-  st = status
-  l = log
-  sm = submodule
+    co = checkout
+    cm = commit -m
+    br = branch
+    st = status
+    l = log
+    sm = submodule
 [user]
     name = Jameson
     email = jamesonjlee@gmail.com
@@ -20,4 +20,4 @@
 [branch]
     autosetuprebase = always
 [merge]
-	conflictstyle = diff3
+    conflictstyle = diff3

@@ -11,6 +11,8 @@ record=
 progress=
 rebase=
 schemes=
+hgext.bookmarks =
+hggit =
 
 [pager]
 pager = less
