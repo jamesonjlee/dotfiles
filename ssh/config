@@ -3,14 +3,19 @@ Host github
     HostName github.com
     IdentityFile ~/.ssh/id_rsa
 
+Host bitbucket
+    User git
+    HostName bitbucket.org
+    IdentityFile ~/.ssh/id_rsa
+
 Host virtualbox
     User jameson
     Hostname 192.168.56.101
     IdentityFile ~/.ssh/id_rsa
 
-Host bitbucket
-    User git
-    HostName bitbucket.org
+Host heyday-box
+    User ubuntu
+    Hostname 192.168.10.101
     IdentityFile ~/.ssh/id_rsa
 
 Host *
