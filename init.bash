@@ -13,6 +13,7 @@ gitignore
 gitconfig
 git-completion.bash
 hgrc
+screenrc
 "
 
 DOTFILE_DIR=`pwd`
