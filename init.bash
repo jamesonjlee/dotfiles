@@ -8,6 +8,7 @@ FILELIST="
 gemrc
 vimrc
 bashrc
+bash_profile
 gitignore
 gitconfig
 git-completion.bash
