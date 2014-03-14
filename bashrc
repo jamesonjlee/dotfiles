@@ -181,9 +181,10 @@ else
     start_agent;
 fi
 
-
 ### Add go path
-PATH=$PATH:/usr/local/go/bin:/usr/local/go
+PATH="/usr/local/go/bin:/usr/local/go:$PATH"
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+PATH="/usr/local/heroku/bin:$PATH"
+
+export PATH
