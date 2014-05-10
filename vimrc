@@ -1,17 +1,51 @@
-"for pathogen
-
-"ask Steve Losh
-call pathogen#infect()
-
+" now we vundle
 " haha
 set nocompatible
+filetype off
+
+"set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+"####################### start Vundles ##########################
+" required
+Plugin 'gmarik/Vundle.vim'
+
+" interact with git from vim
+Plugin 'tpope/vim-fugitive'
+" C-p to navigate easily via search
+Plugin 'kien/ctrlp.vim'
+" Python Autocompletion
+Plugin 'davidhalter/jedi-vim'
+" Nerdsssss
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+" ctag based tags (F5 to browse file structure)
+Plugin 'majutsushi/tagbar'
+
+" syntax stuff
+Bundle 'plasticboy/vim-markdown'
+Bundle 'scrooloose/syntastic'
+
+" color stuff
+Bundle 'altercation/vim-colors-solarized'
+
+"####################### end Vundles ##########################
+
+" close vundling
+call vundle#end()            " required
+filetype plugin indent on    " required
+" required for NerdCommenter
+filetype plugin on
+
+
+" ################ Begin actual configuration ################
 
 "now we start
 syntax enable                    " syntax highlighting
 syntax on
-filetype on
-filetype plugin on
-filetype plugin indent on
 
 " persistent undo
 "set undofile
