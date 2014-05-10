@@ -8,3 +8,8 @@ old_files
 
 # chef pems
 chef/*.pem
+
+# ignore vundles, except ones
+vim/bundle/
+!vim/bundle/Vundle.vim
+!vim/bundle/vimsh
