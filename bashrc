@@ -109,8 +109,6 @@ if [[ -d ~/node_modules/.bin ]]; then
   PATH=$PATH":~/node_modules/.bin"
 fi
 
-alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
-
 #detect OS:
 platform='unknown'
 unamestr=`uname`
@@ -121,9 +119,6 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
   platform='darwin'
   alias ls="ls -G"
 fi
-
-## for rvm ##
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 ## git completion?
 if [ `which git` != "" ]; then
@@ -149,8 +144,6 @@ knife-env() {
 tree() {
   eval "ls -R $*| grep ':$' | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/  /' -e 's/-/|/'"
 }
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 make-n-pip() {
     eval 'virtualenv .'
@@ -184,7 +177,15 @@ fi
 ### Add go path
 PATH="/usr/local/go/bin:/usr/local/go:$PATH"
 
+### Add packer to path
+PATH="/usr/local/packer:$PATH"
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:$PATH"
+# Macport
+PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 export PATH
+
+if [ `which rbenv` != "" ]; then
+    eval "$(rbenv init -)"
+fi
