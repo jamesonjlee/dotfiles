@@ -10,6 +10,6 @@ old_files
 chef/*.pem
 
 # ignore vundles, except ones
-vim/bundle/
+vim/bundle/*
 !vim/bundle/Vundle.vim
 !vim/bundle/vimsh
