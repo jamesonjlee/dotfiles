@@ -184,6 +184,9 @@ PATH="/usr/local/heroku/bin:$PATH"
 # Macport
 PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
+# homebrew
+PATH="/usr/local/bin:$PATH"
+
 export PATH
 
 if [[ `which rbenv` != "" ]]; then
