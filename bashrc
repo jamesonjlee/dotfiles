@@ -179,16 +179,18 @@ PATH="/usr/local/go/bin:/usr/local/go:$PATH"
 
 ### Add packer to path
 PATH="/usr/local/packer:$PATH"
+
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:$PATH"
-# Macport
+
+### Brew
 PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-# homebrew
-PATH="/usr/local/bin:$PATH"
-
-export PATH
+# ChefDK
+PATH="/opt/chefdk/bin:$PATH"
 
 if [[ `which rbenv` != "" ]]; then
     eval "$(rbenv init -)"
 fi
+
+export PATH
