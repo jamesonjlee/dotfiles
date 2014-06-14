@@ -193,4 +193,8 @@ if [[ `which rbenv` != "" ]]; then
     eval "$(rbenv init -)"
 fi
 
+if [ -f "~/dotfiles/git-completion.bash" ]; then
+    source ~/dotfiles/git-completion.bash
+fi
+
 export PATH
