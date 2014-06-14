@@ -40,19 +40,27 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
+## git completion?
+if [ `which git` != "" ]; then
+    [[ -e $HOME/.git-completion.bash ]] && source $HOME/.git-completion.bash
+    [[ -e $HOME/.git-prompt.sh ]] && source $HOME/.git-prompt.sh
+    [[ -e $HOME/dotfiles/git-completion.bash ]] && source $HOME/dotfiles/git-completion.bash
+    [[ -e $HOME/dotfiles/git-prompt.sh ]] && source $HOME/dotfiles/git-prompt.sh
+fi
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w$(__git_ps1 " (%s)")\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1 " (%s)")\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -118,11 +126,6 @@ if [[ "$unamestr" == 'Linux' ]]; then
 elif [[ "$unamestr" == 'Darwin' ]]; then
   platform='darwin'
   alias ls="ls -G"
-fi
-
-## git completion?
-if [ `which git` != "" ]; then
-    [[ -e $HOME/.git-completion.bash ]] && source $HOME/.git-completion.bash
 fi
 
 # vim
@@ -191,10 +194,6 @@ PATH="/opt/chefdk/bin:$PATH"
 
 if [[ `which rbenv` != "" ]]; then
     eval "$(rbenv init -)"
-fi
-
-if [ -f "~/dotfiles/git-completion.bash" ]; then
-    source ~/dotfiles/git-completion.bash
 fi
 
 export PATH
