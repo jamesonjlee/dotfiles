@@ -154,6 +154,8 @@ make-n-pip() {
     eval 'pip install -r ./requirements.txt'
 }
 
+alias makepass="pwgen -C -n -y -s -B -1 $1"
+
 # ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
 
@@ -192,8 +194,8 @@ PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # ChefDK
 PATH="/opt/chefdk/bin:$PATH"
 
+export PATH
+
 if [[ `which rbenv` != "" ]]; then
     eval "$(rbenv init -)"
 fi
-
-export PATH
