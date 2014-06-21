@@ -192,6 +192,11 @@ autocmd VimEnter * NERDTree " start nerd tree
 "For vimshell
 map <C-w>s :source ~/.vim/bundle/vimsh/vimsh.vim<CR>
 
+" Code Nav
+nnoremap <C-f> :noautocmd :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+nnoremap <Leader>k :cn<CR>
+nnoremap <Leader>j :cp<CR>
+
 " Shell command (copy result into a buffer)
 "command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
 "function! s:RunShellCommand(cmdline)
