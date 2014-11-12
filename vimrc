@@ -26,11 +26,14 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 
 " syntax stuff
-Bundle 'plasticboy/vim-markdown'
-Bundle 'scrooloose/syntastic'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'scrooloose/syntastic'
 
 " color stuff
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
+
+"python flakeyflake
+"Plugin 'nvie/vim-flake8'
 
 "####################### end Vundles ##########################
 
@@ -42,6 +45,12 @@ filetype plugin on
 
 
 " ################ Begin actual configuration ################
+
+" flake8 configuration
+let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_aggregate_errors = 1
+"let g:flake8_max_line_length=120
+"let g:flake8_ignore="E301,E302,E225"
 
 "now we start
 syntax enable                    " syntax highlighting

@@ -8,4 +8,4 @@ validation_key           "#{current_dir}/jamesonjlee-validator.pem"
 chef_server_url          "https://api.opscode.com/organizations/jamesonjlee"
 cache_type               'BasicFile'
 cache_options( :path => "#{ENV['HOME']}/.chef/checksums" )
-cookbook_path            ["#{current_dir}/../cookbooks"]
+cookbook_path            ["~jameson/git/chef-repo/cookbooks"]

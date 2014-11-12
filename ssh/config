@@ -13,10 +13,5 @@ Host virtualbox
     Hostname 192.168.56.101
     IdentityFile ~/.ssh/id_rsa
 
-Host heyday-box
-    User ubuntu
-    Hostname 192.168.10.101
-    IdentityFile ~/.ssh/id_rsa
-
 Host *
     ServerAliveInterval 300

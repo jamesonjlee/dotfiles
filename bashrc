@@ -144,8 +144,13 @@ chef-node-host () {
 knife-env() {
   eval 'knife environment $*';
 }
+
 tree() {
-  eval "ls -R $*| grep ':$' | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/  /' -e 's/-/|/'"
+  if [[ `which tree` != '' ]]; then
+      eval "`which tree` $*"
+  else
+    eval "ls -R $*| grep ':$' | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/  /' -e 's/-/|/'"
+  fi
 }
 
 make-n-pip() {
