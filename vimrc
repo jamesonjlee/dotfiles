@@ -16,7 +16,7 @@ Plugin 'gmarik/Vundle.vim'
 " interact with git from vim
 Plugin 'tpope/vim-fugitive'
 " C-p to navigate easily via search
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 " Python Autocompletion
 Plugin 'davidhalter/jedi-vim'
 " Nerdsssss
