@@ -11,7 +11,7 @@ call vundle#begin()
 
 "####################### start Vundles ##########################
 " required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " interact with git from vim
 Plugin 'tpope/vim-fugitive'
