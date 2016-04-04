@@ -35,6 +35,13 @@ Plugin 'altercation/vim-colors-solarized'
 "python flakeyflake
 "Plugin 'nvie/vim-flake8'
 
+" Clojure stuff
+Plugin 'guns/vim-clojure-static'
+Plugin 'kien/rainbow_parentheses.vim'
+
+"vimsh
+Plugin 'jamesonjlee/vimsh'
+
 "####################### end Vundles ##########################
 
 " close vundling
@@ -205,6 +212,12 @@ map <C-w>s :source ~/.vim/bundle/vimsh/vimsh.vim<CR>
 nnoremap <C-f> :noautocmd :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 nnoremap <Leader>k :cn<CR>
 nnoremap <Leader>j :cp<CR>
+
+" rainbow
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " Shell command (copy result into a buffer)
 "command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
