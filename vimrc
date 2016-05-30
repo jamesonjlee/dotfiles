@@ -29,6 +29,9 @@ Plugin 'majutsushi/tagbar'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/syntastic'
 
+" go stuff
+Plugin 'fatih/vim-go'
+
 " color stuff
 Plugin 'altercation/vim-colors-solarized'
 
