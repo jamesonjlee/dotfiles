@@ -55,6 +55,8 @@ filetype plugin on
 
 
 " ################ Begin actual configuration ################
+" solarize
+let g:solarized_termcolors=256
 
 " flake8 configuration
 let g:syntastic_python_checkers = ['pyflakes']
