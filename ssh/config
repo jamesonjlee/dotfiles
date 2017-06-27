@@ -1,3 +1,8 @@
+Include ~/.ssh/config.*
+
+Host *
+    ServerAliveInterval 300
+
 Host github
     User git
     HostName github.com
@@ -7,11 +12,3 @@ Host bitbucket
     User git
     HostName bitbucket.org
     IdentityFile ~/.ssh/id_rsa
-
-Host virtualbox
-    User jameson
-    Hostname 192.168.56.101
-    IdentityFile ~/.ssh/id_rsa
-
-Host *
-    ServerAliveInterval 300
