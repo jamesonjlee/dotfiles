@@ -43,6 +43,7 @@ echo "Linking Directories and Files"
         rm ~$DOTFILE_DIR/${DIR}/${DIR}
     done
     echo "go install exuberant-ctags!"
+    #brew install ctags
     #sudo apt-get install exuberant-ctags
 else
     echo "$DOTFILE_DIR/oldfiles exists, please clean up before running"
