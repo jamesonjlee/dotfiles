@@ -210,19 +210,19 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "For autocmd
 autocmd VimEnter * NERDTree " start nerd tree
 
-"For vimshell
-map <C-w>s :source ~/.vim/bundle/vimsh/vimsh.vim<CR>
+"For vimsh
+"map <C-w>s :source ~/.vim/bundle/vimsh/vimsh.vim<CR>
 
 " Code Nav
-nnoremap <C-f> :noautocmd :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+"nnoremap <C-f> :noautocmd :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 nnoremap <Leader>k :cn<CR>
 nnoremap <Leader>j :cp<CR>
 
 " rainbow
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+"au VimEnter * RainbowParenthesesToggle
+"au Syntax * RainbowParenthesesLoadRound
+"au Syntax * RainbowParenthesesLoadSquare
+"au Syntax * RainbowParenthesesLoadBraces
 
 " Shell command (copy result into a buffer)
 "command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
