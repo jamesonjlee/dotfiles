@@ -39,11 +39,11 @@ Plugin 'altercation/vim-colors-solarized'
 "Plugin 'nvie/vim-flake8'
 
 " Clojure stuff
-Plugin 'guns/vim-clojure-static'
-Plugin 'kien/rainbow_parentheses.vim'
+" Plugin 'guns/vim-clojure-static'
+" Plugin 'kien/rainbow_parentheses.vim'
 
-"vimsh
-Plugin 'jamesonjlee/vimsh'
+" vimsh
+" Plugin 'jamesonjlee/vimsh'
 
 "####################### end Vundles ##########################
 
