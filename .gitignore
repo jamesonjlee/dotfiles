@@ -13,3 +13,6 @@ chef/*.pem
 vim/bundle/*
 !vim/bundle/Vundle.vim
 !vim/bundle/vimsh
+
+# git stuff
+gitconfig.work
