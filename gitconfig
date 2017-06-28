@@ -11,7 +11,7 @@
     l = log
     sm = submodule
 [user]
-    name = Jameson
+    name = Jameson Lee
     email = jamesonjlee@gmail.com
 [core]
     excludesfile = ~/.gitignore
@@ -23,3 +23,5 @@
     conflictstyle = diff3
 [rerere]
     enabled = 1
+[include]
+    path = ~/dotfiles/gitconfig.work
